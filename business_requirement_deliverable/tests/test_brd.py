@@ -185,7 +185,7 @@ class BusinessRequirementDeliverableTest(BusinessRequirementTestBase):
                     pricelist=line.business_requirement_id.pricelist_id.id,
                     uom=line.uom_id.id,
                 )
-                sale_price_unit = product.price
+                sale_price_unit = product._get_contextual_price()
             line.product_id_change()
             self.assertEqual(line.name, description)
             self.assertEqual(line.uom_id.id, self.productA.uom_id.id)
@@ -218,7 +218,7 @@ class BusinessRequirementDeliverableTest(BusinessRequirementTestBase):
                 pricelist=line.business_requirement_id.pricelist_id.id,
                 uom=line.uom_id.id,
             )
-            self.assertEqual(line.sale_price_unit, product.price)
+            self.assertEqual(line.sale_price_unit, product._get_contextual_price())
 
     def test_product_id_change_description_sale(self):
         self.productA.write({"description_sale": "Sales Description Product A"})

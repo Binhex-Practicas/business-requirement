@@ -21,9 +21,11 @@
             </li>
         </xpath>
     </template>
+
     <template
-        id="portal_my_home_br"
-        name="Portal My Home : business requirements entries"
+        id="portal_my_home_d"
+        name="Portal My Home : business requirements deliverables"
+        customize_show="True"
         inherit_id="business_requirement.portal_my_home_br"
         priority="20"
     >
@@ -35,6 +37,7 @@
             </t>
         </xpath>
     </template>
+
     <template id="portal_my_brd_list" name="My Business Requirement Deliverable">
         <t t-call="portal.portal_layout">
             <t t-set="breadcrumbs_searchbar" t-value="True" />

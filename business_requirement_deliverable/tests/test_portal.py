@@ -9,17 +9,18 @@ from odoo.addons.business_requirement.tests.test_portal import (
 
 @odoo.tests.tagged("post_install", "-at_install")
 class BusinessRequirementDeliverablePortal(BusinessRequirementPortalBase):
-    def setUp(self):
-        super().setUp()
-        self.brd = self.env["business.requirement.deliverable"].create(
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.brd = cls.env["business.requirement.deliverable"].create(
             {
                 "name": "test",
                 "portal_published": True,
-                "business_requirement_id": self.br.id,
+                "business_requirement_id": cls.br.id,
             }
         )
-        self.brd.message_subscribe(
-            partner_ids=self.env.ref("base.demo_user0").partner_id.ids,
+        cls.brd.message_subscribe(
+            partner_ids=cls.env.ref("base.demo_user0").partner_id.ids,
         )
 
     def test_tour(self):

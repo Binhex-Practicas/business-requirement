@@ -179,6 +179,7 @@
                             icon="fa-globe"
                         >
                             <label for="portal_published" />
+                            <span>In portal</span>
                             <field name="portal_published" widget="toggle_button" />
                         </button>
                     </div>
@@ -245,10 +246,10 @@
                         </group>
                     </group>
                     <group name="user_case" string="User Case">
-                        <field name="user_case" nolabel="1" />
+                        <field name="user_case" nolabel="1" colspan="2" />
                     </group>
                     <group name="proposed_solution" string="Proposed Solution">
-                        <field name="proposed_solution" nolabel="1" />
+                        <field name="proposed_solution" nolabel="1" colspan="2" />
                     </group>
                 </sheet>
                 <div class="oe_chatter">

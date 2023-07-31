@@ -11,3 +11,6 @@
   * Víctor Martín
   * Alexandre Diaz
   * Víctor Martínez
+
+* `Binhex Systems Solutions <https://www.binhex.es>`__:
+  * Jose Mendez <j.mendez@binhex.es>

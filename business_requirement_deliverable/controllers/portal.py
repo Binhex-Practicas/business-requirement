@@ -66,7 +66,7 @@ class CustomerPortal(CustomerPortal):
         searchbar_inputs = {
             "content": {
                 "input": "content",
-                "label": _('Search <span class="nolabel"> (in Content)</span>'),
+                "label": _("Search in Content"),
             },
             "message": {"input": "message", "label": _("Search in Messages")},
             "stakeholder": {
