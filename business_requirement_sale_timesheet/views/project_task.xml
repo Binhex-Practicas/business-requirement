@@ -8,8 +8,8 @@
             <xpath expr="//field[@name='date_last_stage_update']" position="after">
                 <field
                     name="business_requirement_deliverable_id"
-                    groups="business_requirement.group_business_requirement_user"
                 />
+                <!-- groups="business_requirement.group_business_requirement_user" ESTO PARA EL FIELD?? -->
             </xpath>
             <xpath expr="//div[@name='button_box']" position="inside">
                 <button
@@ -17,6 +17,7 @@
                     name="action_view_deliverable"
                     class="oe_stat_button"
                     icon="fa-tasks"
+                    groups="business_requirement.group_business_requirement_user"
                     attrs="{'invisible': [('business_requirement_deliverable_id', '=', False)]}"
                     string="Deliverable"
                 >
